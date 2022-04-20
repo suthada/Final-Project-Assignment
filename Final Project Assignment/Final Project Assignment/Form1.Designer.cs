@@ -54,6 +54,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.textBoxAssess = new System.Windows.Forms.TextBox();
             this.labelAssess = new System.Windows.Forms.Label();
+            this.buttonDele = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -296,12 +297,22 @@
             this.labelAssess.TabIndex = 6;
             this.labelAssess.Text = "คิดเป็นราคาประเมินสิ่งปลูกสร้าง";
             // 
+            // buttonDele
+            // 
+            this.buttonDele.Location = new System.Drawing.Point(14, 373);
+            this.buttonDele.Name = "buttonDele";
+            this.buttonDele.Size = new System.Drawing.Size(317, 61);
+            this.buttonDele.TabIndex = 18;
+            this.buttonDele.Text = "button1";
+            this.buttonDele.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1533, 660);
+            this.Controls.Add(this.buttonDele);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.dataGridView1);
@@ -357,5 +368,6 @@
         private DataGridViewTextBoxColumn ColumnAssess;
         private TextBox textBoxAssess;
         private Label labelAssess;
+        private Button buttonDele;
     }
 }
