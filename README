@@ -7,8 +7,31 @@
 
 <br/><br/>
 ###โครงสร้างของโปรแกรม (Class diagram)
-[![](https://mermaid.ink/img/pako:eNqdkt1qwzAMhV8l6Gql7QuY3a0dDFY6SC4DQ4u1zdQ_wZZLS9d3n-200IYNuulKOvqOjIQP0DlJIKDTGMJC4YdH09oqxYt3uajuv-bzqsHdoKZkUJ7VlkZS41GOtaXpeX89UFTTFSp7Nxnk8nI2HIY6x_RRaWqc0zV71a_Ixicm8_qgVbc5-wq37snewtW4vWneW2R2NtO_NhekiUft4-Uq-TKXu-hUX81JEIXwo7ec8L_mcuu_mGEGhrxBJdMPKMYW-JMMtSBSKtFvWmht5mIvkWkpFTsP4h11oBlgZFfvbQeCfaQzdPpFJ-r4DelfuVE)](https://mermaid.live/edit#pako:eNqdkt1qwzAMhV8l6Gql7QuY3a0dDFY6SC4DQ4u1zdQ_wZZLS9d3n-200IYNuulKOvqOjIQP0DlJIKDTGMJC4YdH09oqxYt3uajuv-bzqsHdoKZkUJ7VlkZS41GOtaXpeX89UFTTFSp7Nxnk8nI2HIY6x_RRaWqc0zV71a_Ixicm8_qgVbc5-wq37snewtW4vWneW2R2NtO_NhekiUft4-Uq-TKXu-hUX81JEIXwo7ec8L_mcuu_mGEGhrxBJdMPKMYW-JMMtSBSKtFvWmht5mIvkWkpFTsP4h11oBlgZFfvbQeCfaQzdPpFJ-r4DelfuVE)
-    
+classDiagram
+    Program <|-- Tax
+    Tax <|-- Live
+    Tax <|-- Trade
+    Tax <|-- Empty
+    Program : +Main()
+    class Tax{
+        +FileToolStripMenuItem_Click()
+        +OpenToolStripMenuItem_Click()
+        +SaveToolStripMenuItem_Click()
+        +buttonSave_Click()
+        +buttonDelete_Click()
+    }
+    class Live{
+        +live()
+        +assess()
+    }
+    class Trade{
+        +live()
+        +assess()
+    }
+    class Empty{
+        +live()
+        +assess()
+    }
 <br/><br/>
 ###ชื่อของผู้พัฒนาโปรแกรม
 643450089-0 นางสาวสุธาดา โสภาพ
