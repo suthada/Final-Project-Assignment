@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 
 namespace Final_Project_Assignment
 {
@@ -68,24 +68,56 @@ namespace Final_Project_Assignment
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            int size = Convert.ToInt32(textBoxSize.Text);
+            int price = Convert.ToInt32(textBoxPrice.Text);
+            int sum = size * price;
+            textBoxAssess.Text = sum.ToString();
+
             string Name = textBoxName.Text;
             string Address = textBoxAddress.Text;
             string Type = comboBoxType.Text;
-            string Size = textBoxSize.Text;
-            string Price = textBoxPrice.Text;
             string Assess = textBoxAssess.Text;
-            string Total = textBoxTotal.Text;
 
             int n = dataGridView1.Rows.Add();
             dataGridView1.Rows[n].Cells[0].Value = Name;
             dataGridView1.Rows[n].Cells[1].Value = Address;
             dataGridView1.Rows[n].Cells[2].Value = Type;
-            dataGridView1.Rows[n].Cells[3].Value = Size;
-            dataGridView1.Rows[n].Cells[4].Value = Price;
+            dataGridView1.Rows[n].Cells[3].Value = size;
+            dataGridView1.Rows[n].Cells[4].Value = price;
             dataGridView1.Rows[n].Cells[5].Value = Assess;
-            dataGridView1.Rows[n].Cells[6].Value = Total;
-
             
+
+            if(comboBoxType.Text == "ประเภทที่อยู่อาศัย")
+            {
+                double live = 0.03;
+                double assess = Convert.ToDouble(textBoxAssess.Text);
+                double sum1 = assess * live;
+                dataGridView1.Rows[n].Cells[6].Value = sum1.ToString();
+            }
+            if(comboBoxType.Text == "ประเภทพาณิชยกรรม")
+            {
+                double live = 0.005;
+                double assess = Convert.ToDouble(textBoxAssess.Text);
+                double sum1 = assess * live;
+                dataGridView1.Rows[n].Cells[6].Value = sum1.ToString();
+            }
+            if (comboBoxType.Text == "ประเภทที่ว่างเปล่า")
+            {
+                double live = 0.3;
+                double assess = Convert.ToDouble(textBoxAssess.Text);
+                double sum1 = assess * live;
+                dataGridView1.Rows[n].Cells[6].Value = sum1.ToString();
+            }
+
+            comboBoxType.Text = null;
+            textBoxName.Text = "";
+            textBoxPrice.Text = "";
+            textBoxAddress.Text = "";
+            textBoxAssess.Text = "";
+            textBoxSize.Text = "";
+
+
+
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

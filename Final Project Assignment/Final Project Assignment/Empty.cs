@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project_Assignment
 {
-    internal class Price : Total //ราคาประเมินสิ่งปลูกสร้าง
+    internal class Empty //ที่ว่างเปล่า 0.3%
     {
-        public string PriceName { get; set; }
     }
 }
