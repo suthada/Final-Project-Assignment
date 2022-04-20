@@ -115,9 +115,6 @@ namespace Final_Project_Assignment
             textBoxAddress.Text = "";
             textBoxAssess.Text = "";
             textBoxSize.Text = "";
-
-
-
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
