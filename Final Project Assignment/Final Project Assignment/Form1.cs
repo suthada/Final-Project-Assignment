@@ -86,28 +86,21 @@ namespace Final_Project_Assignment
             dataGridView1.Rows[n].Cells[4].Value = price;
             dataGridView1.Rows[n].Cells[5].Value = Assess;
             
+            Live live1 = new Live(); //ประกาศคลาส
+            live1.addLive(Type, Assess); 
+            double a = live1.getLive(); //รับค่ามาเป็นดับเบิ้ลแล้วใช้ เอเป็นตัวเก็บ
+            dataGridView1.Rows[n].Cells[6].Value = a.ToString(); //นำเอมาแสดงที่คอลลัม6
 
-            if(comboBoxType.Text == "ประเภทที่อยู่อาศัย")
-            {
-                double live = 0.03;
-                double assess = Convert.ToDouble(textBoxAssess.Text);
-                double sum1 = assess * live;
-                dataGridView1.Rows[n].Cells[6].Value = sum1.ToString();
-            }
-            if(comboBoxType.Text == "ประเภทพาณิชยกรรม")
-            {
-                double live = 0.005;
-                double assess = Convert.ToDouble(textBoxAssess.Text);
-                double sum1 = assess * live;
-                dataGridView1.Rows[n].Cells[6].Value = sum1.ToString();
-            }
-            if (comboBoxType.Text == "ประเภทที่ว่างเปล่า")
-            {
-                double live = 0.3;
-                double assess = Convert.ToDouble(textBoxAssess.Text);
-                double sum1 = assess * live;
-                dataGridView1.Rows[n].Cells[6].Value = sum1.ToString();
-            }
+            Trade trade = new Trade();
+            trade.addTrade(Type, Assess);
+            double b = trade.getTrade();
+            dataGridView1.Rows[n].Cells[6].Value = b.ToString();
+
+            Empty empty = new Empty();
+            empty.addEmpty(Type, Assess);
+            double c = empty.getEmpty();
+            dataGridView1.Rows[n].Cells[6].Value = c.ToString();
+
 
             comboBoxType.Text = null;
             textBoxName.Text = "";

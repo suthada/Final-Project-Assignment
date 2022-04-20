@@ -8,10 +8,22 @@ namespace Final_Project_Assignment
 {
     internal class Live //ที่อยู่อาศัย 30%
     {
-        //int size = Convert.ToInt32(textBoxSize.Text);
-        //int price = Convert.ToInt32(textBoxPrice.Text);
-        //int sum = size * price;
-        //textBoxAssess.Text = sum.ToString();
+        private double sum = 0;
+
+        public void addLive(string k,string kk)
+        {
+            if (k == "ประเภทที่อยู่อาศัย")
+            {
+                double live = 0.03;
+                double assess = Convert.ToDouble(kk);
+                this.sum = assess * live;
+            }
+        }
+        public double getLive()
+        {
+            return this.sum;
+        }
+       
 
     }
 }

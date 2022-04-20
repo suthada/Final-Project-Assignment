@@ -8,5 +8,19 @@ namespace Final_Project_Assignment
 {
     internal class Trade //พาณิชยกรรม 5%
     {
+        private double sum = 0;
+        public void addTrade(string b, string bb)
+        {
+            if (b == "ประเภทพาณิชยกรรม")
+            {
+                double live = 0.005;
+                double assess = Convert.ToDouble(bb);
+                this.sum = assess * live;
+            }
+        }
+        public double getTrade()
+        {
+            return this.sum;
+        }
     }
 }
