@@ -84,6 +84,14 @@ namespace Final_Project_Assignment
             dataGridView1.Rows[n].Cells[4].Value = Price;
             dataGridView1.Rows[n].Cells[5].Value = Assess;
             dataGridView1.Rows[n].Cells[6].Value = Total;
+
+            
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(rowIndex);
         }
     }
 }

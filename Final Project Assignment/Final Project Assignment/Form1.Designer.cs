@@ -38,14 +38,12 @@
             this.labelSize = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelAssess = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxSize = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.textBoxAssess = new System.Windows.Forms.TextBox();
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +54,8 @@
             this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Chocolate;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
@@ -106,7 +107,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(5, 79);
+            this.labelAddress.Location = new System.Drawing.Point(5, 82);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(34, 20);
             this.labelAddress.TabIndex = 2;
@@ -115,7 +116,7 @@
             // labelType
             // 
             this.labelType.AutoSize = true;
-            this.labelType.Location = new System.Drawing.Point(5, 113);
+            this.labelType.Location = new System.Drawing.Point(5, 122);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(51, 20);
             this.labelType.TabIndex = 3;
@@ -124,7 +125,7 @@
             // labelSize
             // 
             this.labelSize.AutoSize = true;
-            this.labelSize.Location = new System.Drawing.Point(5, 144);
+            this.labelSize.Location = new System.Drawing.Point(5, 157);
             this.labelSize.Name = "labelSize";
             this.labelSize.Size = new System.Drawing.Size(174, 20);
             this.labelSize.TabIndex = 4;
@@ -133,7 +134,7 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(5, 176);
+            this.labelPrice.Location = new System.Drawing.Point(5, 193);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(146, 20);
             this.labelPrice.TabIndex = 5;
@@ -142,23 +143,15 @@
             // labelAssess
             // 
             this.labelAssess.AutoSize = true;
-            this.labelAssess.Location = new System.Drawing.Point(5, 209);
+            this.labelAssess.Location = new System.Drawing.Point(5, 229);
             this.labelAssess.Name = "labelAssess";
             this.labelAssess.Size = new System.Drawing.Size(186, 20);
             this.labelAssess.TabIndex = 6;
             this.labelAssess.Text = "คิดเป็นราคาประเมินสิ่งปลูกสร้าง";
             // 
-            // labelTotal
-            // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(5, 241);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(93, 20);
-            this.labelTotal.TabIndex = 7;
-            this.labelTotal.Text = "ภาษีที่ต้องชำระ";
-            // 
             // comboBoxType
             // 
+            this.comboBoxType.BackColor = System.Drawing.Color.PapayaWhip;
             this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxType.FormattingEnabled = true;
             this.comboBoxType.Items.AddRange(new object[] {
@@ -169,13 +162,14 @@
             "ห้องเช่า",
             "โรงแรม",
             "โรงเรือน"});
-            this.comboBoxType.Location = new System.Drawing.Point(58, 110);
+            this.comboBoxType.Location = new System.Drawing.Point(58, 119);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(264, 28);
             this.comboBoxType.TabIndex = 8;
             // 
             // textBoxName
             // 
+            this.textBoxName.BackColor = System.Drawing.Color.PapayaWhip;
             this.textBoxName.Location = new System.Drawing.Point(58, 44);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(264, 27);
@@ -183,42 +177,41 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(58, 79);
+            this.textBoxAddress.BackColor = System.Drawing.Color.PapayaWhip;
+            this.textBoxAddress.Location = new System.Drawing.Point(58, 82);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(264, 27);
             this.textBoxAddress.TabIndex = 10;
             // 
             // textBoxSize
             // 
-            this.textBoxSize.Location = new System.Drawing.Point(189, 141);
+            this.textBoxSize.BackColor = System.Drawing.Color.PapayaWhip;
+            this.textBoxSize.Location = new System.Drawing.Point(189, 154);
             this.textBoxSize.Name = "textBoxSize";
             this.textBoxSize.Size = new System.Drawing.Size(133, 27);
             this.textBoxSize.TabIndex = 11;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(157, 173);
+            this.textBoxPrice.BackColor = System.Drawing.Color.PapayaWhip;
+            this.textBoxPrice.Location = new System.Drawing.Point(157, 190);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(165, 27);
             this.textBoxPrice.TabIndex = 12;
             // 
             // textBoxAssess
             // 
-            this.textBoxAssess.Location = new System.Drawing.Point(197, 206);
+            this.textBoxAssess.BackColor = System.Drawing.Color.PapayaWhip;
+            this.textBoxAssess.Location = new System.Drawing.Point(197, 226);
             this.textBoxAssess.Name = "textBoxAssess";
+            this.textBoxAssess.ReadOnly = true;
             this.textBoxAssess.Size = new System.Drawing.Size(125, 27);
             this.textBoxAssess.TabIndex = 13;
-            // 
-            // textBoxTotal
-            // 
-            this.textBoxTotal.Location = new System.Drawing.Point(104, 241);
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.Size = new System.Drawing.Size(218, 27);
-            this.textBoxTotal.TabIndex = 14;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnName,
@@ -228,6 +221,7 @@
             this.ColumnPrice,
             this.ColumnAssess,
             this.ColumnTotal});
+            this.dataGridView1.GridColor = System.Drawing.Color.DarkOrange;
             this.dataGridView1.Location = new System.Drawing.Point(342, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -286,39 +280,63 @@
             // 
             // buttonSave
             // 
+            this.buttonSave.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSave.Location = new System.Drawing.Point(5, 286);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(149, 64);
             this.buttonSave.TabIndex = 16;
             this.buttonSave.Text = "บันทึก";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonDelete
             // 
+            this.buttonDelete.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonDelete.Location = new System.Drawing.Point(173, 286);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(149, 64);
             this.buttonDelete.TabIndex = 17;
             this.buttonDelete.Text = "ลบ";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Location = new System.Drawing.Point(6, 257);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(93, 20);
+            this.labelTotal.TabIndex = 18;
+            this.labelTotal.Text = "ภาษีที่ต้องชำระ";
+            // 
+            // textBoxTotal
+            // 
+            this.textBoxTotal.BackColor = System.Drawing.Color.PapayaWhip;
+            this.textBoxTotal.Location = new System.Drawing.Point(101, 258);
+            this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
+            this.textBoxTotal.Size = new System.Drawing.Size(221, 27);
+            this.textBoxTotal.TabIndex = 19;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1533, 605);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(1533, 660);
+            this.Controls.Add(this.textBoxTotal);
+            this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.textBoxAssess);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxSize);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.comboBoxType);
-            this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.labelAssess);
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelSize);
@@ -349,14 +367,12 @@
         private Label labelSize;
         private Label labelPrice;
         private Label labelAssess;
-        private Label labelTotal;
         private ComboBox comboBoxType;
         private TextBox textBoxName;
         private TextBox textBoxAddress;
         private TextBox textBoxSize;
         private TextBox textBoxPrice;
         private TextBox textBoxAssess;
-        private TextBox textBoxTotal;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn ColumnName;
         private DataGridViewTextBoxColumn ColumnAddress;
@@ -367,5 +383,7 @@
         private DataGridViewTextBoxColumn ColumnTotal;
         private Button buttonSave;
         private Button buttonDelete;
+        private Label labelTotal;
+        private TextBox textBoxTotal;
     }
 }
