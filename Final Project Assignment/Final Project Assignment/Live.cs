@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project_Assignment
 {
-    internal class Live //ที่อยู่อาศัย 30%
+    internal class Live //ที่อยู่อาศัย 
     {
         private double sum = 0;
 

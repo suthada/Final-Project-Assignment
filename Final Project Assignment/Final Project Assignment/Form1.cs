@@ -85,21 +85,43 @@ namespace Final_Project_Assignment
             dataGridView1.Rows[n].Cells[3].Value = size;
             dataGridView1.Rows[n].Cells[4].Value = price;
             dataGridView1.Rows[n].Cells[5].Value = Assess;
-            
-            Live live1 = new Live(); //ประกาศคลาส
-            live1.addLive(Type, Assess); 
-            double a = live1.getLive(); //รับค่ามาเป็นดับเบิ้ลแล้วใช้ เอเป็นตัวเก็บ
-            dataGridView1.Rows[n].Cells[6].Value = a.ToString(); //นำเอมาแสดงที่คอลลัม6
 
-            Trade trade = new Trade();
-            trade.addTrade(Type, Assess);
-            double b = trade.getTrade();
-            dataGridView1.Rows[n].Cells[6].Value = b.ToString();
+            if (Type == "ประเภทที่อยู่อาศัย")
+            {
+                Live live = new Live(); //ประกาศคลาส
+                live.addLive(Type, Assess);
+                double a = live.getLive(); //รับค่ามาเป็นดับเบิ้ลแล้วใช้ เอเป็นตัวเก็บ
+                dataGridView1.Rows[n].Cells[6].Value = a.ToString(); //นำเอมาแสดงที่คอลลัม6
+            }
+            else if (Type == "ประเภทพาณิชยกรรม")
+            {
+                Trade trade = new Trade();
+                trade.addTrade(Type, Assess);
+                double b = trade.getTrade();
+                dataGridView1.Rows[n].Cells[6].Value = b.ToString();
+            }
+            else if (Type == "ประเภทที่ว่างเปล่า")
+            {
+                Empty empty = new Empty();
+                empty.addEmpty(Type, Assess);
+                double c = empty.getEmpty();
+                dataGridView1.Rows[n].Cells[6].Value = c.ToString();
+            }
 
-            Empty empty = new Empty();
-            empty.addEmpty(Type, Assess);
-            double c = empty.getEmpty();
-            dataGridView1.Rows[n].Cells[6].Value = c.ToString();
+            //Live live = new Live(); //ประกาศคลาส
+            //live.addLive(Type, Assess);
+            //double a = live.getLive(); //รับค่ามาเป็นดับเบิ้ลแล้วใช้ เอเป็นตัวเก็บ
+            //dataGridView1.Rows[n].Cells[6].Value = a.ToString(); //นำเอมาแสดงที่คอลลัม6
+
+            //Trade trade = new Trade();
+            //trade.addTrade(Type, Assess);
+            //double b = trade.getTrade();
+            //dataGridView1.Rows[n].Cells[6].Value = b.ToString();
+
+            //Empty empty = new Empty();
+            //empty.addEmpty(Type, Assess);
+            //double c = empty.getEmpty();
+            //dataGridView1.Rows[n].Cells[6].Value = c.ToString();
 
 
             comboBoxType.Text = null;

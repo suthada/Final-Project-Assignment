@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project_Assignment
 {
-    internal class Trade //พาณิชยกรรม 5%
+    internal class Trade //พาณิชยกรรม 
     {
         private double sum = 0;
         public void addTrade(string b, string bb)
